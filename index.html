@@ -15,26 +15,89 @@
         </ul>
     </div>
 
+    <!-- menu -->
     <nav>
+        <div class = "title">mlnav</div>
+        <ul class = "nav-links">
+            <li><a href = "#" id = "main-link"> Home</a></li>
+            <li><a href = "#" id = "hero-links">Heros</a></li>
+            <li><a href = "#" id = "embs">Emblems</a></li>
+            <li><a href = "#" id = "knowledge">Tips & Tricks</a></li>
+        </ul>
         <div class = "ham-menu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </div> 
     </nav>
-    <div class = "menu">
-        <img src = "hanxin.png" class = "logo">
+
+    <!-- Intro information -->
+    <div id = "main-page">
+        <div class = "intro">
+            <div class = "grid-item" style = "grid-area: box-1">Learn by statistics to improve your game</div>
+            <div class = "grid-item" style = "grid-area: box-2">Find the next meta hero </div>
+            <div class = "grid-item" style = "grid-area: box-3">Tips and Tricks for specific heros</div>
+            <div class = "grid-item" style = "grid-area: box-4">Mini Games for fun?</div>
+            <div class = "grid-item" style = "grid-area: box-5">Sign up to get the newest and improved experience</div>
+        </div>
+    </div>
+
+    <!-- Hero statistics  -->
+    <table id = "hero-table" style = "display: none;">
+        <thead>
+            <tr>
+                <th></th>
+                <th>name</th>
+                <th>winrate</th>
+                <th>banrate</th>
+                <th>pickrate</th>
+            </tr>
+        </thead>
+        <tbody id = "data-output">
+
+        </tbody>
+    </table>
+
+
+
+    <div id = "emblems">
+        <p>
+            In Mobile Legends: Bang Bang (MLBB), emblems are customizable stat-boosting systems that enhance a hero’s performance in battle. Each emblem set—like Assassin, Mage, or Tank—offers unique attributes such as physical attack, magic power, cooldown reduction, or movement speed. Players can further tailor their emblem by selecting talents that grant special passive effects, like increased damage, lifesteal, or shield generation. Choosing the right emblem for a hero and situation can significantly improve their effectiveness, making emblems a vital part of strategy and gameplay.
+        </p>
+    </div>
+
+    <div id = "cards" class = "maincontainer" style = "display: none";>
+        <!-- <div class = "thecard">
+            <div class = "thefront">
+                <img src = "embls/assasin.png" class = "assasin">
+                
+            </div>
+            <div class = "theback">Back fo the card</div>
+        </div> -->
+    </div>
+
+
+    <div id = "tipsntricks">
+        <h1 class = "gradient-text">General Tip</h1>
         <ul>
-            <li><a href = "#">Home</a></li>
-            <li><a href = "#">Heros</a></li>
-            <li><a href = "#">Tips & Tricks</a></li>
+            <li>Always look at mini maps to know when to engage and when to not over extend.
+            </li>
+            <li>If the opponent used an important spell such as flicker or purify you can quickly type in chat what time their flicker or purify will be up again. For example, if an enemy layla used her flicker at 2:54 then her flicker will be up at 4:54 so then you could type in chat: layla f 4:54. 
+            </li>
+            <li>Check your teammates' conditions before engaging. If you see your mage has low mana or your marksman have low hp in a equal gold lead then maybe its best if you don’t engage by yourself. 
+            </li>
         </ul>
+
+        <div id = "lanes" class = "secondcontainer" style = "display: none;">
+
+        </div>
     </div>
-    <div class = "video">
-        <video controls autoplay muted>
-            <source src = "intro.mp4" type = "video/mp4">
-        </video>
+
+    <div id = "equipments">
+        
     </div>
+
+   
 
     <script src="script.js"></script>
    
