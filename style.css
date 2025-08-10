@@ -135,14 +135,24 @@ nav{
     border-collapse: collapse;
     width: 100%;
     margin-top: 50px;
-    border: 1px solid #00ffff;
     display: none;
 }
 
-th, td{
+th{
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+td{
     padding: 10px;
     border: 1px solid #666;
-    text-align: center
+    text-align: center;
 }
 
 img{
@@ -171,7 +181,23 @@ img{
     border: 1px solid #ccc;
     background-color: cyan;
     text-align: center;
-    
+    border-radius: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+
+    border: 4px solid transparent;
+    background-image:
+        linear-gradient(cyan, cyan),
+        linear-gradient(270deg, red, orange, yellow, green, blue, purple, red);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    background-size: 400% 400%;
+    animation: gradientBorder 6s linear infinite;
+}
+
+@keyframes gradientBorder{
+    0% {background-position: 0% 50%, 0% 50%;}
+    100% {background-position: 100% 50%, 100% 50%;}
 }
 
 #emblems{
@@ -325,3 +351,59 @@ img{
     }
 }
 
+
+.topnav{
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.topnav .search{
+    display: inline-block;
+    margin: 10px auto;
+}
+.topnav input[type=text]{
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.topnav h1{
+    font-size: clamp(2rem, 6vw + 1rem, 5rem);
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 2;
+
+    background-image: 
+        linear-gradient(
+            to right,
+            white, 
+            blue,
+            pink,
+            white
+        );
+
+    background-clip: text;
+    color: transparent;
+    background-size: 200%;
+    animation: animate 2s linear infinite;
+}
+
+.topnav h5{
+    text-align: center;
+    color: white;
+}
+
+@keyframes animate{
+    from{
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
