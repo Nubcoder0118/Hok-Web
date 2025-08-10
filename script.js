@@ -7,28 +7,67 @@ hamMenu.addEventListener('click', () => {
     offScreenMenu.classList.toggle('active');
 })
 
+let heroData = [];
 
 fetch('https://raw.githubusercontent.com/Pren7/MLBB-Winrate/refs/heads/main/winrate.json')
-.then(function(response){
-    return response.json();
+.then(response => response.json())
+.then(products => {
+    heroData = products;
+    renderTable(heroData);
 })
-.then(function(products){
-    let placeholder = document.querySelector("#data-output");
+
+function renderTable(data) {
+    const placeholder = document.querySelector("#data-output");
     let out = "";
-    for(let product of products){
+    for (let hero of data) {
         out += `
             <tr>
-                <td> <img src="${product.icon}" alt = "${product.name}"></td>
-                <td> ${product.name}</td>
-                <td> ${product.winrate}</td>
-                <td> ${product.banrate}</td>
-                <td> ${product.pickrate}</td>
+                <td><img src="${hero.icon}" alt="${hero.name}"></td>
+                <td>${hero.name}</td>
+                <td>${hero.winrate}</td>
+                <td>${hero.banrate}</td>
+                <td>${hero.pickrate}</td>
             </tr>
         `;
     }
-
     placeholder.innerHTML = out;
-})
+}
+
+let sortState = {
+    winrate: 'desc',
+    banrate: 'desc',
+    pickrate: 'desc',
+};
+
+function parseRate(rate){
+    return parseFloat(rate.replace('%', '')) || 0;
+}
+
+document.querySelectorAll('th').forEach(th => {
+    th.addEventListener('click', () =>{
+        const colId = th.getAttribute('id');
+        // skip columns withotu id
+        if (!colId) return; 
+        // removes the sort- from the id
+        let key = colId.replace('sort-', '');
+
+        // sort heroes
+        heroData.sort((a, b) => {
+            let aVal = parseRate(a[key]);
+            let bVal = parseRate(b[key]);
+
+            if (sortState[key] === 'asc'){
+                return aVal - bVal;
+            } else{
+                return bVal - aVal;
+            }
+        })
+
+        sortState[key] = sortState[key] === 'asc' ? 'desc' : 'asc';
+        renderTable(heroData);
+    })
+});
+
 
 fetch('emblem.json')
 .then(response => response.json())
@@ -37,6 +76,7 @@ fetch('emblem.json')
 function showInfo(data){
     console.table(data.data);
 }
+
 
 const herosLinks = document.getElementById('hero-links');
 const heroTable = document.getElementById('hero-table');
@@ -54,6 +94,9 @@ const lanes = document.getElementById('lanes');
 
 const homeLink = document.getElementById('main-link');
 
+const preperation = document.getElementById('preperation');
+const builds = document.getElementById('builds');
+
 herosLinks.addEventListener('click', function(e){
     e.preventDefault();
     startPage.style.display = 'none';
@@ -61,6 +104,7 @@ herosLinks.addEventListener('click', function(e){
     emblemsPage.style.display = 'none';
     emblemsCard.style.display = 'none';
     tips.style.display = 'none';
+    builds.style.display = 'none';
 })
 
 homeLink.addEventListener('click', function(e){
@@ -70,6 +114,7 @@ homeLink.addEventListener('click', function(e){
     emblemsPage.style.display = 'none';
     emblemsCard.style.display = 'none';
     tips.style.display = 'none';
+    builds.style.display = 'none';
 
 })
 
@@ -80,6 +125,7 @@ emblemsLink.addEventListener('click', function(e){
     emblemsPage.style.display = 'block';
     emblemsCard.style.display = 'block';
     tips.style.display = 'none';
+    builds.style.display = 'none';
 })
 
 guide.addEventListener('click', function(e){
@@ -90,8 +136,18 @@ guide.addEventListener('click', function(e){
     emblemsCard.style.display = 'none';
     tips.style.display = 'block';
     lanes.style.display = 'block';
+    builds.style.display = 'none';
 })
 
+preperation.addEventListener('click', function(e){
+    e.preventDefault();
+    startPage.style.display = 'none';
+    heroTable.style.display = 'none';
+    emblemsPage.style.display = 'none';
+    emblemsCard.style.display = 'none';
+    tips.style.display = 'none';
+    builds.style.display = 'block';
+})
 
 
 const cardsData = [
