@@ -23,6 +23,7 @@
             <li><a href = "#" id = "hero-links">Heros</a></li>
             <li><a href = "#" id = "embs">Emblems</a></li>
             <li><a href = "#" id = "knowledge">Tips & Tricks</a></li>
+            <li><a href = "#" id = "preperation">Recommended Builds</a></li>
         </ul>
         <div class = "ham-menu">
             <span></span>
@@ -34,10 +35,10 @@
     <!-- Intro information -->
     <div id = "main-page">
         <div class = "intro">
-            <div class = "grid-item" style = "grid-area: box-1">Learn by statistics to improve your game</div>
-            <div class = "grid-item" style = "grid-area: box-2">Find the next meta hero </div>
-            <div class = "grid-item" style = "grid-area: box-3">Tips and Tricks for specific heros</div>
-            <div class = "grid-item" style = "grid-area: box-4">Mini Games for fun?</div>
+            <div class = "grid-item" style = "grid-area: box-1">Learn by statistics to improve your game. Feel free to click on the headers to sort the winrate, pickrate, and banrate by ascending and descending. </div>
+            <div class = "grid-item" style = "grid-area: box-2">Find the next meta hero with our provided tier list and recommendations. </div>
+            <div class = "grid-item" style = "grid-area: box-3">Tips and Tricks for specific roles and what you need to do to reach the highest rank in mobile legends.</div>
+            <div class = "grid-item" style = "grid-area: box-4">Find the best build for you favorite hero.</div>
             <div class = "grid-item" style = "grid-area: box-5">Sign up to get the newest and improved experience</div>
         </div>
     </div>
@@ -48,9 +49,9 @@
             <tr>
                 <th></th>
                 <th>name</th>
-                <th>winrate</th>
-                <th>banrate</th>
-                <th>pickrate</th>
+                <th id = "sort-winrate">winrate</th>
+                <th id = "sort-banrate">banrate</th>
+                <th id = "sort-pickrate">pickrate</th>
             </tr>
         </thead>
         <tbody id = "data-output">
@@ -97,6 +98,11 @@
         
     </div>
 
+    <div id = "builds" class = "topnav" style = "display: none;">
+        <h1>Mobile Legends Items Guide</h1>
+        <h5>Search for you favorite hero's meta build</h5>
+        <input class = "search" type = "text" placeholder = "Search..">
+    </div>
    
 
     <script src="script.js"></script>
