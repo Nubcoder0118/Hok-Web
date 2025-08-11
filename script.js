@@ -216,3 +216,48 @@ lanesData.forEach(card => {
 })
 
 
+let heroBuilds = [];
+
+fetch('equipment.json')
+  .then(response => response.json())
+  .then(data => {
+    heroBuilds = data;
+    console.log("Hero builds loaded:", heroBuilds);
+  })
+  .catch(() => {
+    console.error("Failed to load hero builds JSON");
+  });
+
+const submitBtn = document.getElementById("mysubmit");
+const inputField = document.getElementById("myText");
+const buildDisplay = document.getElementById("build-display");
+
+submitBtn.addEventListener("click", () => {
+  if (heroBuilds.length === 0) {
+    buildDisplay.innerHTML = "<p>Loading builds, please wait and try again.</p>";
+    return;
+  }
+
+  const inputName = inputField.value.trim().toLowerCase();
+  if (!inputName) {
+    buildDisplay.innerHTML = "<p>Please enter a hero name.</p>";
+    return;
+  }
+
+  const hero = heroBuilds.find(h => h.name.toLowerCase() === inputName);
+
+  if (!hero) {
+    buildDisplay.innerHTML = `<p>No build found for hero: <b>${inputField.value}</b></p>`;
+    return;
+  }
+
+  const imagesHTML = hero.bestBuild
+    .map(url => `<img src="${url}" alt="item" class="build-item" style="width: 64px; height: 64px; margin: 5px;">`)
+    .join('');
+
+  buildDisplay.innerHTML = `
+    <h3>Recommended Build for ${hero.name}:</h3>
+    <div>${imagesHTML}</div>
+  `;
+});
+
