@@ -744,5 +744,27 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Truncheon.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FAntique_Cuirass.png&w=3840&q=75"
     ]
+  },
+  {
+    "name": "Hairth",
+    "bestBuild": [
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMagic_Shoes.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FStarlight_Scythe.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFeather_of_Heaven.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHoly_Crystal.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDivine_Glaive.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840"
+    ]
+  },
+  {
+    "name": "Karrie",
+    "bestBuild": [
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FSwift_Boots.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FCorrosion_Scythe.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGolden_Staff.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDemon_Hunter_Sword.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMalefic_Gun.png&w=3840",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FRose_Gold_Meteor.png&w=3840"
+    ]
   }
 ]
