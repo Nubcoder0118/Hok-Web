@@ -248,7 +248,7 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FStarlium_Scythe.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHoly_Crystal.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDivine_Glaive.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75"
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Truncheon.png&w=3840&q=75"
     ]
   },
   {
@@ -369,7 +369,7 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FConcentrated_Energy.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHoly_Crystal.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDivine_Glaive.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75"
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Truncheon.png&w=3840&q=75"
     ]
   },
   {
@@ -490,7 +490,7 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGlowing_Wand.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlood_Wings.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWishing_Lantern.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75"
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Truncheon.png&w=3840&q=75"
     ]
   },
   {
@@ -654,7 +654,7 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGlowing_Wand.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlood_Wings.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDivine_Glaive.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75"
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Truncheon.png&w=3840&q=75"
     ]
   },
   {
@@ -709,7 +709,7 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWar_Axe.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FQueen's_Wings.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FOracle.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75"
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Truncheon.png&w=3840&q=75"
     ]
   },
   {
@@ -731,7 +731,7 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFleeting_Time.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FOracle.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FIce_Queen_Wand.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75"
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Truncheon.png&w=3840&q=75"
     ]
   },
   {
@@ -741,36 +741,30 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFlask_of_Oasis.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FEnchanted_Talisman.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FOracle.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Truncheon.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FAntique_Cuirass.png&w=3840&q=75"
     ]
   },
   {
     "name": "Harith",
     "bestBuild": [
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FStarlium_Scythe.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FStarlium_Scythe.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFeather_of_Heaven.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHoly_Crystal.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDivine_Glaive.png&w=3840&q=75",
-        "https://static.wikia.nocookie.net/mobile-legends/images/9/9d/Winter_Crown.png/revision/latest?cb=20240706160002"
+     "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMagic_Shoes.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FStarlium_Scythe.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFeather_of_Heaven.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHoly_Crystal.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDivine_Glaive.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75"
+    ]
   },
   {
     "name": "Karrie",
     "bestBuild": [
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FSwift_Boots.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FCorrosion_Scythe.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGolden_Staff.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDemon_Hunter_Sword.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMalefic_Gun.png&w=3840&q=75",
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FRose_Gold_Meteor.png&w=3840&q=75"
+     "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FSwift_Boots.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FCorrosion_Scythe.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGolden_Staff.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDemon_Hunter_Sword.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMalefic_Gun.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FRose_Gold_Meteor.png&w=3840&q=75"
     ]
   }
 ]
-
-
-
-
-
-
-
