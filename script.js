@@ -1,11 +1,27 @@
-const hamMenu = document.querySelector('.ham-menu');
+const hamMenu = document.getElementById('hamburger');
+const nav = document.querySelector('nav');
 
-const offScreenMenu = document.querySelector('.off-screen-menu');
+hamMenu.addEventListener('click', (e) => {
+  e.preventDefault();
+  nav.classList.toggle('active');
+  hamMenu.classList.toggle('active');
+});
 
-hamMenu.addEventListener('click', () => {
-    hamMenu.classList.toggle('active');
-    offScreenMenu.classList.toggle('active');
-})
+// auto close menu when clicking navigation links (mobile)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamMenu.classList.remove('active');
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        hamMenu.classList.remove('active');
+    }
+});
+
 
 let heroData = [];
 
@@ -68,14 +84,6 @@ document.querySelectorAll('th').forEach(th => {
     })
 });
 
-
-fetch('emblem.json')
-.then(response => response.json())
-.then(data => showInfo(data))
-
-function showInfo(data){
-    console.table(data.data);
-}
 
 
 const herosLinks = document.getElementById('hero-links');
