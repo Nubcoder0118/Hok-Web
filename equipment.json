@@ -748,7 +748,7 @@
   {
     "name": "Harith",
     "bestBuild": [
-        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMagic_Shoes.png&w=3840&q=75",
+        "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FStarlium_Scythe.png&w=3840&q=75",
         "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FStarlium_Scythe.png&w=3840&q=75",
         "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFeather_of_Heaven.png&w=3840&q=75",
         "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHoly_Crystal.png&w=3840&q=75",
@@ -768,6 +768,7 @@
     ]
   }
 ]
+
 
 
 
