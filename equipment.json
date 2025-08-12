@@ -1310,7 +1310,7 @@
     "bestBuild": [
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FTough_Boots.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlade_of_Despair.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBerserkers_Fury.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBerserker's_Fury.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMalefic_Roar.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FEndless_Battle.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FRose_Gold_Meteor.png&w=3840&q=75"
@@ -1345,7 +1345,7 @@
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FEndless_Battle.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMalefic_Gun.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlade_of_Despair.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBerserkers_Fury.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBerserker's_Fury.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FRose_Gold_Meteor.png&w=3840&q=75"
     ]
   },
@@ -1385,10 +1385,10 @@
   {
     "name": "Miya",
     "bestBuild": [
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWind_Talker.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWindtalker.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWarrior_Boots.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHaas's_Claws.png&w=3840&q=75",
-      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBerserkers_Fury.png&w=3840&q=75",
+      "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBerserker's_Fury.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlade_of_Despair.png&w=3840&q=75",
       "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMalefic_Gun.png&w=3840&q=75"
     ]
