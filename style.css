@@ -7,76 +7,6 @@ body{
     overflow-x: hidden
 }
 
-.off-screen-menu{
-    background-color: white;
-    height: 100vh;
-    width: 100%;
-    max-width: 200px;
-    position: fixed;
-    top: 0;
-    right: -450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
-    transition: .3s ease;
-
-}
-
-.off-screen-menu li{
-    color: black;
-}
-
-.off-screen-menu.active{
-    right: 0;
-}
-
-.ham-menu{
-    height: 50px;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: auto;
-    position: relative;
-}
-
-.ham-menu span{
-    height: 5px;
-    width: 100%;
-    background-color: blue;
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-}
-
-.ham-menu span:nth-child(1){
-    top: 25%;
-}
-.ham-menu span:nth-child(3){
-    top: 75%;
-}
-
-.ham-menu.active span:nth-child(1){
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.ham-menu.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.ham-menu.active span:nth-child(3){
-    top: 50px;
-    transform: translate(-50%, 50%) rotate(-45deg);
-}
-
-
 nav{
     padding: 1rem;
     display: flex;
@@ -84,6 +14,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     color: white;
+    position: relative;
 }
 .title{
     font-size: 1.8rem;
@@ -92,13 +23,6 @@ nav{
     font-style: oblique;
 }
 
-.video{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0;
-    margin-top: 100px;
-
-}
 
 .nav-links{
     display: flex;
@@ -130,6 +54,65 @@ nav{
 .nav-links li a:hover::after{
     width: 100%;
 }
+
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger .bar{
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+/* responsive for mobile */
+
+@media (max-width: 768px){
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+    }
+    nav.active .nav-links{
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        padding: 15px 0;
+        width: 100%;
+        display: block;
+        color: white;
+    }
+
+
+    .hamburger{
+        display: flex;
+    }
+}
+
+
+.hamburger.active .bar{
+    background-color: #aaa;
+}
+
 
 #hero-table{
     border-collapse: collapse;
@@ -164,18 +147,41 @@ img{
 .intro{
     margin: 0 auto;
     display: grid;
-    /* create two columns each taking an equal fraction */
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px 200px;
     gap: 1em;
-    grid-template-areas:
-    "box-1 box-2 box-2 box-3"
-    "box-1 box-4 box-5 box-5";
     /* horizontally centers the grid */
     justify-content: center;
     align-content: center;
+    padding: 0 20 px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "box-1"
+        "box-2"
+        "box-3"
+        "box-4"
+        "box-5";
 }
 
+@media (min-width: 600px) {
+    .intro{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "box-1 box-1"
+            "box-2 box-3"
+            "box-4 box-5";
+    }
+}
+
+@media (min-width: 900px){
+    .intro{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "box-1 box-1 box-2 box-3"
+            "box-4 box-4 box-5 box-5"
+            "box-4 box-4 box-5 box-5";
+    }
+}
 .grid-item{
     padding: 15px;
     border: 1px solid #ccc;
@@ -250,7 +256,7 @@ img{
     text-align: center;
     font-family: 'zilla slab', sans-serif;
     border-radius: 20px;
-    font-size: 18x;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -278,7 +284,7 @@ img{
     inherits: false;
 }
 
-.thecard::after, .card::before{
+.thecard::after, .thecard::before{
     content: '';
     position: absolute;
     height: 100%;
@@ -294,7 +300,7 @@ img{
 
 }
 
-.card::before{
+.thecard::before{
     
     filter: blur(1.5rem);
     opacity: 0.5;
