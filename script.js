@@ -105,6 +105,10 @@ const homeLink = document.getElementById('main-link');
 const preperation = document.getElementById('preperation');
 const builds = document.getElementById('builds');
 
+const calculatorLink = document.getElementById("price-calculator-link");
+const calculatorContainer = document.getElementById('price-calculator-container')
+
+
 herosLinks.addEventListener('click', function(e){
     e.preventDefault();
     startPage.style.display = 'none';
@@ -123,6 +127,7 @@ homeLink.addEventListener('click', function(e){
     emblemsCard.style.display = 'none';
     tips.style.display = 'none';
     builds.style.display = 'none';
+    calculatorContainer.style.display = "none";
 
 })
 
@@ -134,6 +139,7 @@ emblemsLink.addEventListener('click', function(e){
     emblemsCard.style.display = 'block';
     tips.style.display = 'none';
     builds.style.display = 'none';
+    calculatorContainer.style.display = "none";
 })
 
 guide.addEventListener('click', function(e){
@@ -145,6 +151,7 @@ guide.addEventListener('click', function(e){
     tips.style.display = 'block';
     lanes.style.display = 'block';
     builds.style.display = 'none';
+    calculatorContainer.style.display = "none";
 })
 
 preperation.addEventListener('click', function(e){
@@ -155,8 +162,18 @@ preperation.addEventListener('click', function(e){
     emblemsCard.style.display = 'none';
     tips.style.display = 'none';
     builds.style.display = 'block';
+    calculatorContainer.style.display = "none";
 })
 
+calculatorLink.addEventListener("click", () => {
+    calculatorContainer.style.display = "block";
+    startPage.style.display = 'none';
+    heroTable.style.display = 'none';
+    emblemsPage.style.display = 'none';
+    emblemsCard.style.display = 'none';
+    tips.style.display = 'none';
+    builds.style.display = 'none';
+})
 
 const cardsData = [
     { image: 'embls/assasin.png', title: 'Assassin', description: 'Fast burst damage role and offers penetration + phsyical damage with movement speed'},
@@ -268,4 +285,6 @@ submitBtn.addEventListener("click", () => {
     <div>${imagesHTML}</div>
   `;
 });
+
+
 
