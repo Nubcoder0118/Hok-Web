@@ -27,6 +27,7 @@
             <li><a href = "#" id = "embs">Emblems</a></li>
             <li><a href = "#" id = "knowledge">Tips & Tricks</a></li>
             <li><a href = "#" id = "preperation">Recommended Builds</a></li>
+            <li><a href = "#" id = "price-calculator-link">Price Calculator</a></li>
         </ul>
         <div class = "hamburger" id = "hamburger">
             <span class = "bar"></span>
@@ -70,7 +71,7 @@
         </p>
     </div>
 
-    <div id = "cards" class = "maincontainer" style = "display: none";>
+    <div id = "cards" class = "maincontainer" style = "display: none;">
         <!-- <div class = "thecard">
             <div class = "thefront">
                 <img src = "embls/assasin.png" class = "assasin">
@@ -103,19 +104,164 @@
 
     <div id = "builds" class = "topnav" style = "display: none;">
         <h1>Mobile Legends Items Guide</h1>
-        <h5>Search for your favorite hero's meta build</h5>
+        <h5>Search for you favorite hero's meta build</h5>
         <input id = "myText" class = "search" type = "text" placeholder = "Search..">
         <button id = "mysubmit">Submit</button>
 
         <div id = "build-display"></div>
     </div>
    
+    <div id = "price-calculator-container" style="display:none;">
+        <div id = "price-calculator">
+               
+        </div>
+    </div>
+
+      <!-- ✅ Official React, ReactDOM, Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type = "text/babel">
+       
+           
+        const items = [
+        // --- ATTACK ---
+        { name: "Berserker's Fury", price: 2390, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBerserker%27s_Fury.png&w=3840&q=75", category: "Attack" },
+        { name: "Blade of Despair", price: 3010, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlade_of_Despair.png&w=3840&q=75", category: "Attack" },
+        { name: "Blade of the Heptaseas", price: 1950, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlade_of_the_Heptaseas.png&w=3840&q=75", category: "Attack" },
+        { name: "Corrosion Scythe", price: 2050, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FCorrosion_Scythe.png&w=3840&q=75", category: "Attack" },
+        { name: "Demon Hunter Sword", price: 2180, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDemon_Hunter_Sword.png&w=3840&q=75", category: "Attack" },
+        { name: "Endless Battle", price: 2330, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FEndless_Battle.png&w=3840&q=75", category: "Attack" },
+        { name: "Golden Staff", price: 2000, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGolden_Staff.png&w=3840&q=75", category: "Attack" },
+        { name: "Great Dragon Spear", price: 2140, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGreat_Dragon_Spear.png&w=3840&q=75", category: "Attack" },
+        { name: "Haas's Claws", price: 2020, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHaas%27s_Claws.png&w=3840&q=75", category: "Attack" },
+        { name: "Hunter Strike", price: 2010, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHunter_Strike.png&w=3840&q=75", category: "Attack" },
+        { name: "Malefic Gun", price: 2120, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMalefic_Gun.png&w=3840&q=75", category: "Attack" },
+        { name: "Malefic Roar", price: 2060, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMalefic_Roar.png&w=3840&q=75", category: "Attack" },
+        { name: "Rose Gold Meteor", price: 1820, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FRose_Gold_Meteor.png&w=3840&q=75", category: "Attack" },
+        { name: "Sea Halberd", price: 2050, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FSea_Halberd.png&w=3840&q=75", category: "Attack" },
+        { name: "War Axe", price: 2100, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWar_Axe.png&w=3840&q=75", category: "Attack" },
+        { name: "Wind of Nature", price: 1910, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWind_of_Nature.png&w=3840&q=75", category: "Attack" },
+        { name: "Windtalker", price: 1880, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWindtalker.png&w=3840&q=75", category: "Attack" },
+        // Some sites list "Sky Piercer" as hybrid; include it once to avoid duplicates:
+        { name: "Sky Piercer", price: 1500, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FSky_Piercer.png&w=3840&q=75", category: "Hybrid" },
+
+        // --- MAGIC ---
+        { name: "Blood Wings", price: 2100, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlood_Wings.png&w=3840&q=75", category: "Magic" },
+        { name: "Clock of Destiny", price: 2030, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FClock_of_Destiny.png&w=3840&q=75", category: "Magic" },
+        { name: "Concentrated Energy", price: 2020, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FConcentrated_Energy.png&w=3840&q=75", category: "Magic" },
+        { name: "Divine Glaive", price: 1970, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDivine_Glaive.png&w=3840&q=75", category: "Magic" },
+        { name: "Enchanted Talisman", price: 1870, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FEnchanted_Talisman.png&w=3840&q=75", category: "Magic" },
+        { name: "Feather of Heaven", price: 2030, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFeather_of_Heaven.png&w=3840&q=75", category: "Magic" },
+        { name: "Flask of the Oasis", price: 1850, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFlask_of_the_Oasis.png&w=3840&q=75", category: "Magic" },
+        { name: "Fleeting Time", price: 2050, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FFleeting_Time.png&w=3840&q=75", category: "Magic" },
+        { name: "Genius Wand", price: 2000, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGenius_Wand.png&w=3840&q=75", category: "Magic" },
+        { name: "Glowing Wand", price: 2150, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGlowing_Wand.png&w=3840&q=75", category: "Magic" },
+        { name: "Holy Crystal", price: 3000, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FHoly_Crystal.png&w=3840&q=75", category: "Magic" },
+        { name: "Ice Queen Wand", price: 2040, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FIce_Queen_Wand.png&w=3840&q=75", category: "Magic" },
+        { name: "Lightning Truncheon", price: 2250, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FLightning_Truncheon.png&w=3840&q=75", category: "Magic" },
+        { name: "Starlium Scythe", price: 2220, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FStarlium_Scythe.png&w=3840&q=75", category: "Magic" },
+        { name: "Winter Crown", price: 1910, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWinter_Crown.png&w=3840&q=75", category: "Magic" },
+        { name: "Wishing Lantern", price: 2250, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWishing_Lantern.png&w=3840&q=75", category: "Magic" },
+
+        // --- DEFENSE ---
+        { name: "Antique Cuirass", price: 2170, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FAntique_Cuirass.png&w=3840&q=75", category: "Defense" },
+        { name: "Athena's Shield", price: 2150, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FAthena%27s_Shield.png&w=3840&q=75", category: "Defense" },
+        { name: "Blade Armor", price: 1910, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBlade_Armor.png&w=3840&q=75", category: "Defense" },
+        { name: "Brute Force Breastplate", price: 1870, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBrute_Force_Breastplate.png&w=3840&q=75", category: "Defense" },
+        { name: "Cursed Helmet", price: 1910, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FCursed_Helmet.png&w=3840&q=75", category: "Defense" },
+        { name: "Dominance Ice", price: 2010, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDominance_Ice.png&w=3840&q=75", category: "Defense" },
+        { name: "Guardian Helmet", price: 2200, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FGuardian_Helmet.png&w=3840&q=75", category: "Defense" },
+        { name: "Immortality", price: 2120, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FImmortality.png&w=3840&q=75", category: "Defense" },
+        { name: "Oracle", price: 1860, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FOracle.png&w=3840&q=75", category: "Defense" },
+        { name: "Queen's Wings", price: 2250, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FQueen%27s_Wings.png&w=3840&q=75", category: "Defense" },
+        { name: "Radiant Armor", price: 1880, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FRadiant_Armor.png&w=3840&q=75", category: "Defense" },
+        { name: "Thunder Belt", price: 1820, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FThunder_Belt.png&w=3840&q=75", category: "Defense" },
+        { name: "Twilight Armor", price: 2100, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FTwilight_Armor.png&w=3840&q=75", category: "Defense" },
+
+        // --- MOVEMENT (BOOTS) ---
+        { name: "Arcane Boots", price: 690, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FArcane_Boots.png&w=3840&q=75", category: "Movement" },
+        { name: "Demon Shoes", price: 720, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FDemon_Shoes.png&w=3840&q=75", category: "Movement" }, // if 404, try Demon_Boots.png
+        { name: "Magic Shoes", price: 710, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FMagic_Shoes.png&w=3840&q=75", category: "Movement" },
+        { name: "Rapid Boots", price: 750, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FRapid_Boots.png&w=3840&q=75", category: "Movement" },
+        { name: "Swift Boots", price: 710, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FSwift_Boots.png&w=3840&q=75", category: "Movement" },
+        { name: "Tough Boots", price: 700, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FTough_Boots.png&w=3840&q=75", category: "Movement" },
+        { name: "Warrior Boots", price: 720, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FWarrior_Boots.png&w=3840&q=75", category: "Movement" },
+        { name: "Boots", price: 250, img: "https://mlbb.io/_next/image?url=%2Fimages%2Fitems%2FBoots.png&w=3840&q=75", category: "Movement" },
+        ];
+
+        function ItemList({ onAdd }){
+            return (
+                <div>
+                    <h2>This item builder is for calculatong how much a full build would cost. Click on Icon to add items!</h2>
+                    <div className = "items-grid">
+                        {items.map((item) => (
+                            <div key = {item.name} className = "item-card">
+                                <img 
+                                    src = {item.img} 
+                                    width = "64" 
+                                    alt = {item.name}
+                                    style={{cursor: "pointer"}}
+                                    // click image to add
+                                    onClick={()=> onAdd(item)} 
+                                    /> 
+                                    <p>{item.name} - {item.price}</p>
+                   
+                            </div>  
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+
+        function BuildBar({ selectedItems, onReset}) {
+        const total = selectedItems.reduce((sum, item) => sum + item.price, 0);
+        return (
+        <div style={{ marginTop: "20px", padding: "10px", borderTop: "2px solid gray" }}>
+            <h2>Your Build</h2>
+            {selectedItems.length === 0 && <p>No items added yet.</p>}
+            {selectedItems.map((item, index) => (
+                <div key={index}>
+                    <img src={item.img} width="40" /> {item.name} - {item.price}
+                </div>
+            ))}
+            <h3>Total: {total}</h3>
+            {selectedItems.length > 0 && (
+                <button onClick={onReset} style = {{marginTop: "10px", padding: "5px 10px"}}>
+                    Reset Build
+                </button>
+            )}
+               
+        </div>
+        );
+        }
+        function App() {
+            const [selectedItems, setSelectedItems] = React.useState([]);
+
+            function handleAdd(item) {
+                if (selectedItems.length < 6) {
+                setSelectedItems([...selectedItems, item]);
+                }
+            }
+            function handleReset() {
+                setSelectedItems([]);
+            }
+            return (
+                <>
+                    <ItemList onAdd={handleAdd} />
+                    <BuildBar selectedItems={selectedItems} onReset={handleReset}/>
+                </>
+            );
+        }
+        const root = ReactDOM.createRoot(document.getElementById("price-calculator"));
+        root.render(<App />);
+    </script>
+
+
 
     <script src="script.js"></script>
-   
+
 </body>
 </html>
-
-
 
 
